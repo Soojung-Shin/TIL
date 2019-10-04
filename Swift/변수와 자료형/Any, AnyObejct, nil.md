@@ -1,9 +1,9 @@
 > inflearn의 야곰님의 swift기초 강의를 바탕으로 작성하였습니다.
 
 # Any, AnyObject, nil
+<br>
 
-
-
+  
 Any
 ---
 
@@ -17,11 +17,12 @@ Any
   val valueAny: Any = "SooJung"
   valueAny = 1234
   valueAny = 123.4
-```
+``` 
+<br>
 
-
-
-
+  
+  
+  
 AnyObject 
 ---------
 
@@ -37,7 +38,7 @@ valueAnyObject = someClass()
 valueAnyObject = 123.4 //에러
 valueAnyObject = valueAny //에러
 ```
-
+<br>
 
 
 
