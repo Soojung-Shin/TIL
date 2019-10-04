@@ -4,22 +4,21 @@
 
 여러 값들을 묶어서 하나의 변수로 표현
 
+<br>
 
 
-### Array
 
+Array
 ------
 
 순서가 있는 리스트 컬렉션 타입
 
 
-
-#### 선언과 생성
+### 선언과 생성
 
 ```swift
 var, let 변수명: Array<DataType> = Array<DataType>()
 ```
-
 
 
 ```swift
@@ -34,8 +33,7 @@ let immutable Array = [1, 2, 3] // 생성할 때 값을 넣어줌(let을 사용�
 
 
 
-
-#### 요소 접근
+### 요소 접근
 
 ```Swift
 arrayName[index]
@@ -54,7 +52,7 @@ integers[0] // 에러 - 비어있는 Array
 
 
 
-#### 요소 추가
+### 요소 추가
 
 ```swift
 arrayName.append(value)
@@ -77,7 +75,7 @@ integers.append(1.23) // 에러
 
 
 
-#### 요소 검사
+### 요소 검사
 
 ```swift
 arrayName.contains(value) // true or false
@@ -96,7 +94,7 @@ integers.contains(5) // false
 
 
 
-#### 요소 삭제
+### 요소 삭제
 
 ```Swift
 arrayName.remove(at: index)
@@ -128,7 +126,7 @@ integers.removeAll() // []
 
 
 
-#### 사이즈
+### 사이즈
 
 ```swift
 arrayName.count
@@ -142,19 +140,18 @@ arrayName.count
 integers.count // 0
 ```
 
+<br>
 
 
 
-
-### Dictionary
-
+Dictionary
 ------------------
 
 키와 값의 쌍으로 이루어진 컬렉션 타입 (HashMap과 유사)
 
 
 
-#### 선언과 생성
+### 선언과 생성
 
 ```swift
 var, let 변수명: Dictionary<Key DataType, Value DataType> = Dictionary<Key DataType, Value DataType>()
@@ -172,7 +169,7 @@ let initializedDictionary: [String: String] = ["name": "soojung", "nation": "kor
 
 
 
-#### 요소 추가
+### 요소 추가
 
 ```swift
 anyDictionary["someKey"] = "value"
@@ -186,7 +183,7 @@ anyDictionary	// ["someKey": "dictionary", "anotherKey": 100]
 
 
 
-#### 요소 삭제
+### 요소 삭제
 
 ```swift
 dictionaryName.removeValue(forKey: KeyValue)
@@ -214,7 +211,7 @@ anyDictionary // [:]
 
 
 
-##### 주의!
+### 주의!
 
 ```swift
 let someValue: String = initializedDictionary["name"] //에러
@@ -224,17 +221,18 @@ Dictionary의 해당 key 값을 가진 요소의 value가 있을 수도 있고 �
 
 따라서 상수에 값을 넣어줄 수 없음
 
+<br>
 
 
-### Set
 
+Set
 ------
 
 순서가 없고, 멤버가 유일한 컬렉션 타입
 
 
 
-#### 선언과 생성
+### 선언과 생성
 
 ```swift
 var 변수명: Set<DataType> = Set<DataType>()
@@ -252,7 +250,7 @@ var integerSet: Set<Int> = Set<Int>() //Set([])
 
 
 
-#### 요소 추가
+### 요소 추가
 
 ```swift
 변수명.insert(value)
@@ -274,7 +272,7 @@ Set은 멤버가 유일한 컬렉션 타입이기 때문에 이미 가지고있�
 
 
 
-#### 요소 검사
+### 요소 검사
 
 ```swift
 setName.contains(value) // true or false
@@ -293,7 +291,7 @@ integerSet.contains(100) //false
 
 
 
-#### 요소 삭제
+### 요소 삭제
 
 ```swift
 setName.remove(value)
@@ -313,7 +311,7 @@ setName.removeFirst()
 
 
 
-#### 집합 연산
+### 집합 연산
 
 - **Union**
 
@@ -378,7 +376,7 @@ let union: Set<Int> = setA.intersection(setB) // {2, 1}
 
 
 
-#### 정렬
+### 정렬
 
 ```swift
 setName.sorted()
