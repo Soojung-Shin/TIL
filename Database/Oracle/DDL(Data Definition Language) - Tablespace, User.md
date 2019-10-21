@@ -1,5 +1,7 @@
 # DDL(Data Definition Language)
 
+![OracleLanguageImage.png](https://user-images.githubusercontent.com/16719527/67200364-83544b00-f43e-11e9-8f84-3508d40b5840.png)
+
 데이터베이스 관리자가 테이블 스페이스를 관리하고 사용자 계정 정보를 관리하는 명령어들을 말한다. 또한 사용자가 테이블과 같은 데이터 구조를 정의하는데 사용되는 명령어들로 생성, 변경, 삭제, 이름 변경 등 데이터 구조와 관련된 명령어들을 말한다. CREATE, ALTER, DROP, RENAME, TRUNCATE 등이 있다.
 
 <br />
