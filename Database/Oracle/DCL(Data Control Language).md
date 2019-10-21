@@ -1,5 +1,6 @@
 # DCL(Data Control Language)
 
+![OracleLanguageImage.png](https://user-images.githubusercontent.com/16719527/67200364-83544b00-f43e-11e9-8f84-3508d40b5840.png)
 USER에게 데이터베이스에 접근하고 객체들을 사용할 수 있는 권한을 주고 회수하는 명령어들을 말한다. GRANT, REVOKE 등이 있다.
 
 ## 권한(Privilege)
