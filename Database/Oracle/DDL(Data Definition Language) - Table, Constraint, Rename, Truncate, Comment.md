@@ -1,4 +1,4 @@
-# DDL(Data Definition Language) - Table, Constraint
+# DDL(Data Definition Language) - Table, Constraint, Rename, Truncate, Comment
 
 ![OracleLanguageImage.png](https://user-images.githubusercontent.com/16719527/67200364-83544b00-f43e-11e9-8f84-3508d40b5840.png)
 
