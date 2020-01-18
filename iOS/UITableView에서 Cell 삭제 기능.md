@@ -28,7 +28,7 @@
 
 <br />
 
-<img width="301" alt="image-20191121163627708" src="https://user-images.githubusercontent.com/16719527/72658199-ec713d80-39f0-11ea-8001-530439d3a258.png">
+<p align="center"><img width="301" alt="image-20191121163627708" src="https://user-images.githubusercontent.com/16719527/72658199-ec713d80-39f0-11ea-8001-530439d3a258.png"></p>
 
 <br />
 
@@ -65,5 +65,5 @@ self.navigationItem.leftBarButtonItem = self.editButtonItem
 
 <br />
 
-<img width="298" alt="image-20191121164429041" src="https://user-images.githubusercontent.com/16719527/72658202-fc891d00-39f0-11ea-83a6-601eeb6cb70d.png">
+<p align="center"><img width="298" alt="image-20191121164429041" src="https://user-images.githubusercontent.com/16719527/72658202-fc891d00-39f0-11ea-83a6-601eeb6cb70d.png"></p>
 
