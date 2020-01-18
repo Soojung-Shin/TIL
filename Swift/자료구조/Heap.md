@@ -12,7 +12,7 @@
 
 또한, 힙은 완전 이진트리이기 때문에 가장 마지막 레벨을 제외하고는 모두 채워져있어야한다.
 
-
+<br />
 
 ### 힙의 사용
 
@@ -21,7 +21,7 @@
 - Priority queue를 만들 때
 - Priority queue로 Prim, Dijkstra 그래프 알고리즘을 이용할 때
 
-
+<br />
 
 ## Array를 이용한 힙
 
@@ -29,11 +29,13 @@
 
 힙을 배열로 표현하면, 힙에 있는 요소들을 메모리에 모두 함께 저장해 시간과 공간 복잡도를 효율적으로 사용할 수 있다. 또한 두 요소의 값을 바꾸는 작업에서 이진 트리보다 훨씬 간단하게 할 수 있다.
 
-<img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200118161912174.png" alt="image-20200118161912174" style="zoom:50%;" />
+<br />
+
+<img width="412" alt="힙" src="https://user-images.githubusercontent.com/16719527/72661295-76ce9700-3a1b-11ea-9c11-f545bf8988f4.png">
 
 힙을 배열로 나타내면, 각 레벨의 요소나 자식 요소들을 쉽게 조회할 수 있다. 트리에서 자식 노드를 조회하는 것은 `O(log n)`이지만, 배열에서 조회하는 것은 `O(1)` 로 가능하다.
 
-
+<br /><br />
 
 ### 자식 노드 인덱스 구하기
 
@@ -46,13 +48,13 @@
 - 왼쪽 자식 노드 : 2i + 1
 - 오른쪽 자식 노드 : 2i + 2
 
-
+<br />
 
 ### 부모 노드 인덱스 구하기
 
 현재 노드의 인덱스가 i라고 하면, 해당 노드의 부모 노드 인덱스는 `floor((i - 1) / 2)` 가 된다.
 
-
+<br /><br />
 
 ```swift
 struct Heap<Element: Equatable> {
@@ -91,7 +93,7 @@ struct Heap<Element: Equatable> {
 }
 ```
 
-
+<br /><br />
 
 ### Remove
 
@@ -103,7 +105,7 @@ struct Heap<Element: Equatable> {
 
 3. 노드는 2번 과정을 반복하다가 더 이상 자식들 중 자신보다 큰 값이 없거나, 자식이 없다면(마지막 레벨에 도달했다면) 멈춘다.
 
-
+<br />
 
 ```swift
 mutating func remove() -> Element? {
@@ -150,7 +152,7 @@ mutating func siftDown(from index: Int) {
 
 `remove()`의 전체 과정의 시간복잡도는 `O(log n)`이다. 배열에서 element의 위치를 바꾸는 것은 `O(1)`이므로, `siftDown()`의 시간복잡도는 `O(log n)`이다.
 
-
+<br /><br />
 
 ### Insert
 
@@ -158,7 +160,7 @@ mutating func siftDown(from index: Int) {
 2. 추가한 노드의 부모 노드와 힙 조건에 맞는지 확인한다. 맞지않다면 부모 노드와 위치를 바꾼다.
 3. 노드는 2번 과정을 계속 반복하다가 조건에 맞는 부모를 만나거나, 루트 노드에 도달하면 멈춘다.
 
-
+<br />
 
 ```swift
 mutating func insert(_ element: Element) {
@@ -179,7 +181,7 @@ mutating func siftUp(from index: Int) {
 
 `insert(_:)`의 시간복잡도는 `O(log n)` 이다. 배열에 element를 추가하는 것은 `O(1)`이고, `siftUp()` 의 시간복잡도는  `O(log n)` 이다.
 
-
+<br /><br />
 
 ### 루트 노드가 아닌 요소 삭제하기
 
@@ -211,7 +213,7 @@ mutating func remove(at index: Int) -> Element? {
 
 루트 노드가 아닌 요소를 삭제하는 것은 `O(log n)`의 작업이다.
 
-
+<br /><br />
 
 ### 힙에서 요소 검색하기
 
@@ -248,7 +250,7 @@ func index(of element: Element, startingAt i: Int) -> Int? {
 
 최악의 경우 우리는 모든 요소들을 확인하게 되므로 `O(n)` 이지만 힙의 특징을 사용하여 검색의 시간을 줄일 수 있었다.
 
-
+<br /><br />
 
 ### 이미 있는 배열을 힙으로 만들기
 
@@ -270,7 +272,7 @@ init(sort: @escaping (Element, Element) -> Bool, elements: [Element] = []) {
 }
 ```
 
-
+<br />
 
 ------
 
