@@ -51,3 +51,46 @@ public func selectionSort<Element>(_ array: inout [Element]) where Element: Comp
 <br />
 
 버블 정렬과 마찬가지로 선택 정렬의 최선, 최악, 평균 시간 복잡도는 `O(n^2)` 이다. 간단하지만 `swapAt` 작업을 줄였기 때문에 버블 정렬보다 성능이 우수하다!
+
+<br />
+
+<br />
+
+### 일반화
+
+선택 정렬을 배열이 아닌 컬렉션에서도 이용할 수 있도록 일반화 시켜보자!
+
+선택 정렬은 앞에서 뒤로만 순회하기 때문에 어떤 컬렉션에서도 사용할 수 있다. 하지만 정렬하는 과정에서 위치를 바꾸는 작업이 필요하기 때문에 `MutableCollection(가변 컬렉션)` 프로토콜을 준수해야 한다.
+
+<br />
+
+```swift
+public func selectionSort<T>(_ collection: inout T)
+	where T: MutableCollection, T.Element: Comparable {
+  
+  guard collection.count >= 2 else {
+    return
+  }
+    
+  for current in collection.indices {
+    var lowest = current
+    var other = collection.index(after: current)
+    
+    //컬렉션을 순회하면서 최솟값의 인덱스를 찾아낸다.
+    while other < collection.endIndex {
+      if collection[lowest] > collection[other] {
+        lowest = other
+      }
+      other = collection.index(after: other)
+    }
+    
+    //현재 인덱스가 최솟값이 아니라면 최솟값과 위치를 바꾼다.
+    if lowest != current {
+      collection.swapAt(lowest, current)
+    }
+  }
+}
+```
+
+알고리즘의 동작은 동일하다. 컬렉션의 인덱스를 사용하도록 변경하기만 하면 된다.
+

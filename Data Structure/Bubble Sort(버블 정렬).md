@@ -73,11 +73,50 @@ public func bubbleSort<Element>(_ array: inout [Element]) where Element: Compara
 
 <br />
 
-버블 정렬은 이미 배열이 정렬되어있을 경우 `O(n)` 의 시간복잡도를 가지지만, 최악의 경우 `O(n^2)` 의 시간복잡도를 가진다. 빠른 정렬법은 아니다!
+버블 정렬은 이미 배열이 정렬되어있을 경우 `O(n)` 의 시간 복잡도를 가지지만, 최악의 경우 `O(n^2)` 의 시간 복잡도를 가진다. 빠른 정렬법은 아니다!
 
+<br />
 
+<br />
 
+### 일반화
 
+버블 정렬을 배열이 아닌 컬렉션에서도 이용할 수 있도록 일반화 시켜보자!
 
+버블 정렬은 앞에서 뒤로만 순회하기 때문에 어떤 컬렉션에서도 사용할 수 있다. 하지만 정렬하는 과정에서 위치를 바꾸는 작업이 필요하기 때문에 `MutableCollection(가변 컬렉션)` 프로토콜을 준수해야 한다.
 
+<br />
+
+```swift
+public func bubbleSort<T>(_ collection: inout T)
+	where T: MutableCollection, T.Element: Comparable {
+  
+  guard collection.count >= 2 else {
+    return
+  }
+    
+  for end in collection.indices.reversed() {
+    var swapped = false
+    var current = collection.startIndex
+    
+    while current < end {
+      //current의 뒤에 있는 값을 가져온다.
+      let next = collection.index(after: current)
+      if collection[current] > collection[next] {
+        collection.swapAt(current, next)
+        swapped = true
+      }
+      //current에 다음 인덱스 값을 저장하고 위 과정을 반복한다.
+      current = next
+    }
+    
+    //swap이 일어나지 않았다면 종료한다.
+    if !swapped {
+      return
+    }
+  }
+}
+```
+
+알고리즘의 동작은 동일하다. 컬렉션의 인덱스를 사용하도록 변경하기만 하면 된다.
 
