@@ -72,7 +72,7 @@ public func insertionSort<Element> (_ array: inout [Element]) where Element: Com
 
 삽입 정렬을 배열이 아닌 컬렉션에서도 이용할 수 있도록 일반화 시켜보자!
 
-삽입 정렬은 요소를 이동시킬 때 컬렉션의 앞에서 뒤쪽으로 이동한다. 따라서 컬렉션은 반드시 `MutableCollection(가변 컬렉션)` 프로토콜과  `BidirectionalCollection(양방향 컬렉션)` 프로토콜을 만족해야 한다.
+삽입 정렬은 요소를 이동시킬 때 컬렉션의 뒤에서 앞으로 이동한다. 따라서 컬렉션은 반드시 `MutableCollection(가변 컬렉션)` 프로토콜과  `BidirectionalCollection(양방향 컬렉션)` 프로토콜을 만족해야 한다.
 
 <br />
 
