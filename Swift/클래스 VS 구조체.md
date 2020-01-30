@@ -65,7 +65,7 @@ print(reference2.str)		//과연 reference2의 str도 변경될까요?
 
 구조체는 값이 복사되기 때문에 `value1`과 `value2`는 각각 다른 인스턴스를 가지고 있다. 그래서 `value1` 인스턴스의 값을 변경해도 `value2`의 값에는 영향을 주지 않는다.
 
-클래스는 참조가 전달되었기 때문에 `reference1`과 `reference2`는 같은 주소의 인스턴스를 공유하고 있는 셈이다. 그래서 `reference1`의 인스턴스 변수의 값을 변경하면 `reference2`도 함께 x변경되었다.
+클래스는 참조가 전달되었기 때문에 `reference1`과 `reference2`는 같은 주소의 인스턴스를 공유하고 있는 셈이다. 그래서 `reference1`의 인스턴스 변수의 값을 변경하면 `reference2`도 함께 변경되었다.
 
 <br />
 
