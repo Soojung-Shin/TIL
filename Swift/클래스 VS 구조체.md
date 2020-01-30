@@ -2,6 +2,8 @@
 
 <br />
 
+<p align="center">
+
 |    🤔적용 가능?     |     클래스     |   구조체   |
 | :----------------: | :------------: | :--------: |
 |      **Type**      | Reference Type | Value Type |
@@ -13,6 +15,8 @@
 | **디이니셜라이저** |       O        |     X      |
 |  **타입 캐스팅**   |       O        |     X      |
 |  **서브스크립트**  |       O        |     O      |
+
+</p>
 
 <br />
 
@@ -56,7 +60,7 @@ print(value2.str)		//Value 타입 입니다.
 var reference1 = ReferenceType()		//Reference 타입 입니다.
 var reference2 = reference1
 reference1.str = "과연 reference2의 str도 변경될까요?"
-print(reference2.str)		//Class 입니다. 과연 reference2의 str도 변경될까요?
+print(reference2.str)		//과연 reference2의 str도 변경될까요?
 ```
 
 구조체는 값이 복사되기 때문에 `value1`과 `value2`는 각각 다른 인스턴스를 가지고 있다. 그래서 `value1` 인스턴스의 값을 변경해도 `value2`의 값에는 영향을 주지 않는다.
