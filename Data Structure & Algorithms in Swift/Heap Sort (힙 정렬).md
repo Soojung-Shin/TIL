@@ -50,7 +50,6 @@
 <br />
 
 <p align="center"><img width="230" alt="image-20200203222941137" src="https://user-images.githubusercontent.com/16719527/73659483-b19e2380-46d9-11ea-991e-50a0575fbc89.png"></p>
-
 <br /><br /><br />
 
 ### 구현
@@ -132,3 +131,9 @@ mutating func siftDown(from index: Int, upTo: Int) {
 <br /><br />
 
 힙 정렬은 최선, 최악, 평균의 경우 모두 `O(n logn)`의 시간 복잡도를 갖습니다. 전체 목록을 한 번 순회해야하고, 요소를 교체할 때마다 `O(logn)`인 sift down 작업을 하기 때문입니다.
+
+
+
+-----
+
+Artwork/images/designs: from Data Structures & Algorithms in Swift, available at www.raywenderlich.com

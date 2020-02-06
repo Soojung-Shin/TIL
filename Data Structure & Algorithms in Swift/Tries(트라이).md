@@ -5,7 +5,6 @@
 예를 들어 아래와 같은 영어단어들을 생각해볼 수 있다.
 
 <p align="center"><img width="220" alt="image-20200126121628627" src="https://user-images.githubusercontent.com/16719527/73130933-5b7c1100-4045-11ea-933f-367daa0cf0a2.png"></p>
-
 스트링의 각 문자들은 노드에 맵핑된다. 스트링의 마지막 노드는 종료 노드로 표시된다. 위 이미지에서 점으로 나타낸 것이 종료 노드를 나타내는 것이다.
 
 트라이의 이점은 접두사 매칭 작업 등에서 가장 잘 나타난다.
@@ -41,15 +40,12 @@ class EnglishDictionary {
 아래 이미지에서 접두사로 `CU` 가 오는 단어를 찾아보자.
 
 <p align="center"><img width="220" alt="image-20200126121628627" src="https://user-images.githubusercontent.com/16719527/73130933-5b7c1100-4045-11ea-933f-367daa0cf0a2.png"></p>
-
 처음 `C` 를 가지고 있는 노드를 찾는다. 해당 검색 작업으로 트라이에서 `C`를 포함하지 않는 다른 브랜치들은 빠르게 제외시킬 수 있다.
 
 <p align="center"><img width="220" alt="image-20200126123550228" src="https://user-images.githubusercontent.com/16719527/73130934-5b7c1100-4045-11ea-8db0-c43b7446b7f0.png"></p>
-
 다음 문자인 `U`를 포함하는 단어로 이동해보자. 
 
 <p align="center"><img width="225" alt="image-20200126123829104" src="https://user-images.githubusercontent.com/16719527/73130935-5c14a780-4045-11ea-92ec-f06e2c75b7a0.png"></p>
-
 접두어를 모두 확인했기 때문에, 트라이는 `U` 노드에 연결되어있는 모든 컬렉션을 리턴한다. 이 경우에는 `CUT`과 `CUTE`가 리턴될 것이다. 만약 수십만 개의 단어를 가지고 있을 때, 트라이를 사용한다면 비교 작업을 상당히 줄일 수 있다.
 
 <br /><br /><br />
