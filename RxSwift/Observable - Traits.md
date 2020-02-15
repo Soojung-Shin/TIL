@@ -81,11 +81,11 @@
 
 ```swift
 saveDocument()
-	.andThen(Observable.from(createMessage))
-	.subscribe(onNext: { message in
-  	message.display()
+  .andThen(Observable.from(createMessage))
+  .subscribe(onNext: { message in
+    message.display()
   }, onError: { error in
-  	alert(error.localizedDescription)
+    alert(error.localizedDescription)
   })
 ```
 
