@@ -379,7 +379,7 @@ subject.onError(MyError.anError)
 
 ## Relay
 
-Relay는 replay behavior를 유지하면서 subject를 감쌀(wrap) 수 있다. 다른 subject나 일반적인 옵저버블에서는 값을 추가할 때 `onNext(_:)` 메소드를 사용했지만, relay에서는 `accept(_:)` 메소드를 사용한다. relay가 오직 값만 받아들일(accept) 수 있고 `.error`나 `.completed` 이벤트는 추가할 수 없기 때문이다. 그래서 non-terminating 시퀀스에서 유용하다.
+Relay는 기존 subject의 behavior를 유지하면서 subject를 감쌀(wrap) 수 있다. 다른 subject나 일반적인 옵저버블에서는 값을 추가할 때 `onNext(_:)` 메소드를 사용했지만, relay에서는 `accept(_:)` 메소드를 사용한다. relay가 오직 값만 받아들일(accept) 수 있고 `.error`나 `.completed` 이벤트는 추가할 수 없기 때문이다. 그래서 non-terminating 시퀀스에서 유용하다.
 
 래핑된 subject와 relay의 차이점은 절대 종료되지 않는다는 것! relay는 종료되지 않는 다는 것을 보장할 수 있다.
 
