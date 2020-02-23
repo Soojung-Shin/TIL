@@ -1,6 +1,6 @@
 # Time-based Operators - Buffering operators
 
-버퍼링을 다루는 오퍼레이터. 새로운 구독자에게 과거의 elements를 다시 전달하거나 버퍼링해 전송한다. 언제 어떻게 예전 elements나 새로운 elements를 언제 어떻게 전달할지를 제어할 수 있다.
+버퍼링을 다루는 오퍼레이터. 새로운 구독자에게 과거의 elements를 다시 전달하거나 버퍼링해 전송한다. 이전의 elements나 새로운 elements를 언제 어떻게 전달할지를 제어할 수 있다.
 
 <br /><br />
 
