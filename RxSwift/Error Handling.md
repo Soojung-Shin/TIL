@@ -28,13 +28,13 @@
 
   지정된 default 값으로 에러를 처리한다.
 
-  <img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200301180741558.png" alt="image-20200301180741558" style="zoom:50%;" />
+  <p align="center"><img width="394" alt="image-20200301180741558" src="https://user-images.githubusercontent.com/16719527/76139650-92f2ca00-6095-11ea-8de6-499ba83fd9ad.png"></p>
 
 - **Retry**
 
   성공할 때까지 지정된(아니면 무제한...) 횟수만큼 다시 시도한다.
 
-  <img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200301180827180.png" alt="image-20200301180827180" style="zoom:50%;" />
+  <p align="center"><img width="395" alt="image-20200301180827180" src="https://user-images.githubusercontent.com/16719527/76139652-95552400-6095-11ea-8d52-ba9d7f57b868.png"></p>
 
 <br />
 
@@ -88,7 +88,7 @@ func catchError(_ handler:) -> RxSwift.Observable<Self.E>
 
 클로저를 파라미터로 받고, 완전 다른 observable을 반환한다. 
 
-![image-20200303144604167](/Users/soojung/Library/Application Support/typora-user-images/image-20200303144604167.png)
+<p align="center"><img width="450" alt="image-20200303144604167" src="https://user-images.githubusercontent.com/16719527/76139654-96865100-6095-11ea-98df-46b2f55fdda2.png"></p>
 
 Observable에서 error가 발생했을 때, 캐싱된 이전 값들을 리턴하는 캐싱 전략 등등에서 사용할 수 있다. 이 경우에 catchError는 이전에는 사용이 가능했지만 어떤 이유로 더 이상 사용이 불가능한 값들을 리턴한다.
 
@@ -110,7 +110,7 @@ func catchErrorJustReturn(_ element:) -> RxSwift.Observable<Self.E>
 
 에러는 observable 체인에 의해서 전달된다. 그래서 만약 에러 핸들링 처리가 안되어있다면 체인의 시작에서 발생한 에러는 최종 구독까지 전달될 것이다. 따라서 한 observable에서 에러가 발생했을 때, 에러 구독이 통지되고 모든 구독이 dispose 될 수 있다는 뜻이다! observable에 에러가 발생했을 때 observable은 종료되고(terminated), 에러 후에 뒤따라오는 모든 이벤트는 무시될 것이다.
 
-<img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200303145835000.png" alt="image-20200303145835000" style="zoom:50%;" />
+<p align="center"><img width="398" alt="image-20200303145835000" src="https://user-images.githubusercontent.com/16719527/76139656-97b77e00-6095-11ea-8e2f-1eee99f6256e.png"></p>
 
 위 그림에서 네트워크에서 에러가 발생하고 observable 시퀀스도 에러를 방출했을 때, UI를 업데이트하는 구독은 중지되고, 그 후의 어떤 업데이트도 수행하지 않는다.
 
@@ -118,7 +118,7 @@ func catchErrorJustReturn(_ element:) -> RxSwift.Observable<Self.E>
 
 아래처럼 에러를 catch해서 처리하는 과정이 필요하다.
 
-<img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200303150905809.png" alt="image-20200303150905809" style="zoom:50%;" />
+<p align="center"><img width="468" alt="image-20200303150905809" src="https://user-images.githubusercontent.com/16719527/76139657-98501480-6095-11ea-9ef9-e0b158952b9a.png"></p>
 
 <br />
 
@@ -130,7 +130,7 @@ func catchErrorJustReturn(_ element:) -> RxSwift.Observable<Self.E>
 
 retry 오퍼레이터는 observable이 에러를 방출했을 때, observable 자체가 반복된다. 
 
-<img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200303153007322.png" alt="image-20200303153007322" style="zoom:50%;" />
+<p align="center"><img width="326" alt="image-20200303153007322" src="https://user-images.githubusercontent.com/16719527/76139658-98e8ab00-6095-11ea-868b-9d91c5b36750.png"></p>
 
 retry는 observable의 전체 작업을 반복한다는 것을 꼭! 기억해야 한다. 누가 retry 할지 컨트롤 할 수 없기 때문에 UI를 변경하는 side effect를 observable 안에 넣는 것은 피하는 것이 좋다.
 
@@ -244,7 +244,7 @@ Failure (204ms): Status 404
 
 
 
-<img src="/Users/soojung/Library/Application Support/typora-user-images/image-20200303164927780.png" alt="image-20200303164927780" style="zoom:50%;" />
+<p align="center"><img width="450" alt="image-20200303164927780" src="https://user-images.githubusercontent.com/16719527/76139659-99814180-6095-11ea-9dc4-a6ffaad1b78b.png"></p>
 
 트리거가 기존 error observable을 사용해 back-off 전략을 구현할 수 있다. 간단쓰~!
 
